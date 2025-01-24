@@ -1,0 +1,24 @@
+- config:
+    vllm_params:
+      modelid: "meta-llama/Meta-Llama-3.1-8B-Instruct"
+      max_sequence_length: 2048
+      tensor_parallel_degree: 32
+      batch_size: 4
+    benchmark_params:
+      num_input_tokens: 1024
+      num_output_tokens: 512
+      concurrency: 4
+      results_path: "test"
+    name: "config1"
+- config:
+    vllm_params:
+      modelid: "meta-llama/Meta-Llama-3.1-8B-Instruct"
+      max_sequence_length: 2048
+      tensor_parallel_degree: 8
+      batch_size: 8
+    benchmark_params:
+      num_input_tokens: 1024
+      num_output_tokens: 512
+      concurrency: 8
+      results_path: "test"
+    name: "config2"
