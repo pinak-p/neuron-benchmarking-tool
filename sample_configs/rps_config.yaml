@@ -1,0 +1,24 @@
+- config:
+    vllm_params:
+      modelid: "meta-llama/Meta-Llama-3.1-8B-Instruct"
+      max_sequence_length: 4096
+      tensor_parallel_degree: 32
+      batch_size: 4
+    benchmark_params:
+      num_input_tokens: 2048
+      num_output_tokens: 512
+      rps: 1
+      results_path: "/home/ubuntu/guidellm_results"
+    name: "config1"
+- config:
+    vllm_params:
+      modelid: "meta-llama/Meta-Llama-3.1-8B-Instruct"
+      max_sequence_length: 4096
+      tensor_parallel_degree: 32
+      batch_size: 4
+    benchmark_params:
+      num_input_tokens: 2048
+      num_output_tokens: 1024
+      rps: 0.5
+      results_path: "/home/ubuntu/guidellm_results"
+    name: "config1"
